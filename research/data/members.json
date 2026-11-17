@@ -440,5 +440,18 @@
     "works_count": 16,
     "cited_by_count": 1253,
     "h_index": 7
+  },
+  {
+    "id": "damayanthi-herath",
+    "name": "Damayanthi Herath",
+    "openalex_id": "A5021169741",
+    "title": "Assistant Professor",
+    "department": "Computing",
+    "email": "",
+    "orcid": null,
+    "last_synced": "2026-11-17T20:14:50.695Z",
+    "works_count": 48,
+    "cited_by_count": 849,
+    "h_index": 13
   }
 ]
