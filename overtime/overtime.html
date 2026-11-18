@@ -438,10 +438,6 @@ async function doLogin() {
     const cfg = await ghGet(GITHUB_CFG_PATH);
     if (cfg) Object.assign(APP_CONFIG, cfg);
   } catch(e) {}
-  try {
-    const instr = await ghGet(GITHUB_INSTR_PATH);
-    if (instr && Array.isArray(instr)) { APP_INSTRUCTORS = instr; populateLoginSel(); }
-  } catch(e) {}
   if (currentRole === 'instructor') {
     const id = document.getElementById('instrSel').value;
     if (!id) { showAlert('loginAlert', 'Please select your name.', 'err'); return; }
