@@ -433,10 +433,14 @@ async function sha256(str) {
 
 async function doLogin() {
   hideAlert('loginAlert');
-  // Re-fetch latest config before login
+  // Re-fetch latest config + instructors before login
   try {
     const cfg = await ghGet(GITHUB_CFG_PATH);
     if (cfg) Object.assign(APP_CONFIG, cfg);
+  } catch(e) {}
+  try {
+    const instr = await ghGet(GITHUB_INSTR_PATH);
+    if (instr && Array.isArray(instr)) { APP_INSTRUCTORS = instr; populateLoginSel(); }
   } catch(e) {}
   if (currentRole === 'instructor') {
     const id = document.getElementById('instrSel').value;
