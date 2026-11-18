@@ -759,8 +759,8 @@ function savePDF() {
 function openEmail() {
   const { totalHrs, monthName } = buildReportText();
   const cfg = APP_CONFIG;
-  const to  = currentUser.dept?.includes('Business') ? cfg.hodB : cfg.hodC;
-  const cc  = cfg.hrEmail;
+  const to  = cfg.hrEmail;
+  const cc  = currentUser.dept?.includes('Business') ? cfg.hodB : cfg.hodC;
   const sub = encodeURIComponent(`After-Hours Time Report — ${currentUser.name} — ${monthName} ${calYear}`);
   const body = encodeURIComponent(`Dear HOD,\n\nPlease find attached my After-Hours Time Report for ${monthName} ${calYear}.\n\nTotal Hours: ${totalHrs}\n\nPlease see the attached PDF for details.\n\nRegards,\n${currentUser.name}`);
   // Outlook Web App compose URL
