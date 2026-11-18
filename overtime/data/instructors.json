@@ -117,5 +117,11 @@
     "email": "sasanka.r@kandyuni.lk",
     "dept": "Department of Business Management",
     "role": "instructor"
+  },
+  {
+    "id": "i1795029345621",
+    "name": "Test",
+    "email": "t@t.tt",
+    "dept": "Department of Computing"
   }
 ]
