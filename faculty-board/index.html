@@ -421,7 +421,7 @@ function updatePreview(){
     <div class="doc-para">The ${meetNo} meeting … scheduled ${date?'<b>'+fmtDateSup(date)+'</b>':''} ${time?'at <b>'+fmtTime(time)+'</b>':''} ${venue?'in <b>'+esc(venue)+'</b>':''}.
     Your presence at the meeting will be highly appreciated.</div>
     ${extra?`<div class="doc-para">${esc(extra)}</div>`:''}
-    <div class="doc-para">Please find the attached minutes of the ${esc(prevNo)} meeting held on ${prevDate}.</div>
+    <div class="doc-para">Please find the attached minutes of the ${prevNo} meeting held on ${prevDate}.</div>
     <div class="doc-para">Yours faithfully,<br><br>${signedName?'<b>'+esc(signedName)+'</b><br>':''}${esc(signedTitle)}</div>`;
 
   // Agenda numbered list
@@ -512,7 +512,7 @@ function coverHtml(LOGO,inst,meetNo,type,date,time,venue,coverDate,prevNo,prevDa
   <p class="letter-title">${meetNo} Meeting of the ${esc(type)}</p>
   <p class="para">The ${meetNo} meeting of the ${esc(type)} of ${esc(inst)} is scheduled to be held on ${d} ${t} ${v}. The agenda of the meeting is given below. Your presence at the meeting will be highly appreciated.</p>
   ${extra?`<p class="para">${esc(extra).replace(/\n/g,'<br>')}</p>`:''}
-  <p class="para">Please find the attached minutes of the ${esc(prevNo)} meeting of the ${esc(type)} of ${esc(inst)} held on ${prevDate.replace(/<[^>]+>/g,'')}.</p>
+  <p class="para">Please find the attached minutes of the ${prevNo} meeting of the ${esc(type)} of ${esc(inst)} held on ${prevDate.replace(/<[^>]+>/g,'')}.</p>
   <div class="closing"><p>Yours faithfully,</p><div class="sign-gap"></div><p>${signedName?'<b>'+esc(signedName)+'</b>':''}</p><p>${esc(signedTitle)}</p></div>`;
 }
 
