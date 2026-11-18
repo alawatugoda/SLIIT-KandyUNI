@@ -283,6 +283,7 @@ function g(id){const e=document.getElementById(id);return e?e.value:'';}
 function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/\n/g,'<br>');}
 function getMeetNum(){return g('meta-no').replace(/[^0-9]/g,'')||'X';}
 function ordSup(d){const v=d%100;const s=['th','st','nd','rd'];return d+(s[(v-20)%10]||s[v]||s[0]);}
+function fmtOrdinal(n){if(!n)return n;const v=parseInt(n)%100;const sx=['th','st','nd','rd'];const sfx=sx[(v-20)%10]||sx[v]||sx[0];return n+'<sup>'+sfx+'</sup>';}
 function fmtDateSup(val){if(!val)return'';const dt=new Date(val+'T00:00:00');const ms=['January','February','March','April','May','June','July','August','September','October','November','December'];const d=dt.getDate();const v=d%100;const sx=['th','st','nd','rd'];const sfx=sx[(v-20)%10]||sx[v]||sx[0];return d+'<sup>'+sfx+'</sup> of '+ms[dt.getMonth()]+' '+dt.getFullYear();}
   function fmtDatePlain(val){
   if(!val)return'';
@@ -399,13 +400,13 @@ function renderMinutes(){
 // ── PREVIEW ──
 function updatePreview(){
   const inst=g('meta-inst')||'Institution';
-  const meetNo=g('meta-no')||'__';
+  const meetNo=fmtOrdinal(g('meta-no'))||'__';
   const type=g('meta-type')||'Faculty Board';
   const date=g('meta-date');const time=g('meta-time');const venue=g('meta-venue');
   const signedName=g('cover-name');const signedTitle=g('cover-title')||'Dean/COO & CAO';
   const extra=g('cover-extra');
   const coverDate=g('cover-date')||date;
-  const prevNo=g('cover-prev-no')||'__';
+  const prevNo=fmtOrdinal(g('cover-prev-no'))||'__';
   const prevDateRaw=g('cover-prev-date');
   const prevDate=prevDateRaw?fmtDateSup(prevDateRaw):'__';
 
@@ -501,6 +502,7 @@ function kuHeader(LOGO){
 }
 
 function coverHtml(LOGO,inst,meetNo,type,date,time,venue,coverDate,prevNo,prevDate,signedName,signedTitle,extra){
+  meetNo=fmtOrdinal(meetNo); prevNo=fmtOrdinal(prevNo);
   const d=date?`Thursday, <b>${fmtDateSup(date)}</b>`:'___________';
   const t=time?`at <b>${fmtTime(time)}</b>`:'';
   const v=venue?`in the <b>${esc(venue)}</b>`:'';
