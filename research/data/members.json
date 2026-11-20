@@ -440,18 +440,5 @@
     "works_count": 16,
     "cited_by_count": 1255,
     "h_index": 7
-  },
-  {
-    "id": "yamuna-wickramasinghe",
-    "name": "Yamuna Wickramasinghe",
-    "openalex_id": "A5159551438",
-    "title": "Lecturer",
-    "department": "Business Management",
-    "email": "yamuna.wi@kandyuni.lk",
-    "orcid": null,
-    "last_synced": "2026-11-20T04:23:13.872Z",
-    "works_count": 1,
-    "cited_by_count": 0,
-    "h_index": 0
   }
 ]
