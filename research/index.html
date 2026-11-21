@@ -125,6 +125,35 @@ const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replac
 let members = [];
 let currentTab = 'staff';
 
+// ── Classify work type (same logic as member.html) ────────────────
+function classifyWork(w) {
+  const t = (w.type || '').toLowerCase();
+  if (t === 'journal-article' || t === 'article') return 'journal';
+  if (t === 'proceedings-article' || t === 'conference-paper') return 'conference';
+  return 'other';
+}
+
+// ── Fetch journal+conference count from OpenAlex in background ────
+async function fetchJCCount(openalexId) {
+  try {
+    let count = 0, page = 1;
+    while (true) {
+      const r = await fetch(
+        `https://api.openalex.org/works?filter=author.id:${openalexId}&select=type&per-page=200&page=${page}`,
+        { headers: { 'User-Agent': 'SLIIT-KandyUNI/1.0' } }
+      );
+      if (!r.ok) break;
+      const d = await r.json();
+      const results = d.results || [];
+      if (!results.length) break;
+      count += results.filter(w => classifyWork(w) !== 'other').length;
+      if (page * 200 >= (d.meta?.count || 0)) break;
+      page++;
+    }
+    return count;
+  } catch { return null; }
+}
+
 // ── Init ──────────────────────────────────────────────────────────
 async function loadMembers() {
   try {
@@ -134,6 +163,21 @@ async function loadMembers() {
   renderDeptFilter();
   filterMembers();
   updateStatsBar();
+
+  // Background: fetch actual journal+conference counts from OpenAlex
+  // for members that don't already have the filtered count saved
+  const needsFetch = members.filter(m => m.openalex_id && m.journal_conference_count == null);
+  if (needsFetch.length) {
+    for (const m of needsFetch) {
+      const jc = await fetchJCCount(m.openalex_id);
+      if (jc !== null) {
+        m.journal_conference_count = jc;
+        // Re-render that member's card
+        filterMembers();
+        updateStatsBar();
+      }
+    }
+  }
 }
 
 function renderDeptFilter() {
@@ -147,7 +191,7 @@ function renderDeptFilter() {
 
 function updateStatsBar() {
   const bar = document.getElementById('statsBar');
-  const totalPubs = members.reduce((s,m) => s + (m.works_count||0), 0);
+  const totalPubs = members.reduce((s,m) => s + (m.journal_conference_count ?? m.works_count ?? 0), 0);
   const totalCites = members.reduce((s,m) => s + (m.cited_by_count||0), 0);
   bar.innerHTML = `<span><strong>${members.length}</strong> staff members</span>
     <span><strong>${totalPubs.toLocaleString()}</strong> journal &amp; conference papers</span>
@@ -190,7 +234,7 @@ function memberCard(m) {
       ${m.department ? `<span class="member-dept">${esc(m.department)}</span>` : ''}
       <div class="member-stats">
         ${hasData ? `
-          <div class="stat"><strong>${(m.works_count||0).toLocaleString()}</strong> papers</div>
+          <div class="stat"><strong>${(m.journal_conference_count ?? m.works_count ?? 0).toLocaleString()}</strong> papers</div>
           <div class="stat"><strong>${(m.cited_by_count||0).toLocaleString()}</strong> citations</div>
           ${m.h_index != null ? `<div class="stat"><strong>${m.h_index}</strong> h-index</div>` : ''}
         ` : `<div class="stat" style="color:var(--fg-muted);font-size:.8rem">No publications data</div>`}
