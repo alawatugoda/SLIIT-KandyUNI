@@ -387,7 +387,13 @@ async function fetchOaStats(oaId) {
       cited_by_count: d.cited_by_count,
       h_index: d.summary_stats?.h_index,
       journal_conference_count: jc ? jc.count : null,
-      jc_cited_by_count: jc ? jc.citations : null
+      jc_cited_by_count: jc ? jc.citations : null,
+      journal_count:    jc ? jc.journal_count    : null,
+      conference_count: jc ? jc.conference_count : null,
+      book_count:       jc ? jc.book_count       : null,
+      chapter_count:    jc ? jc.chapter_count    : null,
+      preprint_count:   jc ? jc.preprint_count   : null,
+      total_citations:  jc ? jc.total_citations  : null
     };
   } catch { return null; }
 }
@@ -396,12 +402,17 @@ function classifyWork(w) {
   const t = (w.type || '').toLowerCase();
   if (t === 'journal-article' || t === 'article') return 'journal';
   if (t === 'proceedings-article' || t === 'conference-paper') return 'conference';
+  if (t === 'book') return 'book';
+  if (t === 'book-chapter') return 'chapter';
+  if (t === 'preprint') return 'preprint';
   return 'other';
 }
 
 async function fetchJCStats(oaId) {
   try {
-    let count = 0, citations = 0, page = 1;
+    const counts = { journal:0, conference:0, book:0, chapter:0, preprint:0, other:0 };
+    const cites  = { journal:0, conference:0, book:0, chapter:0, preprint:0, other:0 };
+    let page = 1;
     while (true) {
       const r = await fetch(
         `https://api.openalex.org/works?filter=author.id:${oaId}&select=type,cited_by_count&per-page=200&page=${page}`
@@ -410,13 +421,27 @@ async function fetchJCStats(oaId) {
       const d = await r.json();
       const results = d.results || [];
       if (!results.length) break;
-      const jc = results.filter(w => classifyWork(w) !== 'other');
-      count += jc.length;
-      citations += jc.reduce((s,w) => s + (w.cited_by_count||0), 0);
+      for (const w of results) {
+        const cat = classifyWork(w);
+        counts[cat]++;
+        cites[cat] += (w.cited_by_count || 0);
+      }
       if (page * (d.meta?.per_page || 200) >= (d.meta?.count || 0)) break;
       page++;
     }
-    return { count, citations };
+    const jcCount = counts.journal + counts.conference;
+    const jcCites = cites.journal + cites.conference;
+    const totalCites = Object.values(cites).reduce((s,v) => s+v, 0);
+    return {
+      count: jcCount,
+      citations: jcCites,
+      journal_count: counts.journal,
+      conference_count: counts.conference,
+      book_count: counts.book,
+      chapter_count: counts.chapter,
+      preprint_count: counts.preprint,
+      total_citations: totalCites
+    };
   } catch { return null; }
 }
 
