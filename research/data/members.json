@@ -7,10 +7,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:21.190655+00:00",
+    "last_synced": "2026-11-22T06:05:02.798Z",
     "works_count": 15,
     "cited_by_count": 146,
-    "h_index": 7
+    "h_index": 7,
+    "journal_conference_count": 14,
+    "jc_cited_by_count": 144
   },
   {
     "id": "janaka-alawatugoda-mw4qjlh5",
@@ -20,10 +22,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:21.392714+00:00",
+    "last_synced": "2026-11-22T06:05:04.548Z",
     "works_count": 52,
     "cited_by_count": 723,
-    "h_index": 14
+    "h_index": 14,
+    "journal_conference_count": 49,
+    "jc_cited_by_count": 720
   },
   {
     "id": "chathurika-koswatte",
@@ -33,10 +37,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:21.531135+00:00",
+    "last_synced": "2026-11-22T06:05:05.850Z",
     "works_count": 13,
     "cited_by_count": 86,
-    "h_index": 5
+    "h_index": 5,
+    "journal_conference_count": 11,
+    "jc_cited_by_count": 85
   },
   {
     "id": "gihani-gunarathna",
@@ -46,10 +52,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:21.730570+00:00",
+    "last_synced": "2026-11-22T06:05:06.974Z",
     "works_count": 1,
     "cited_by_count": 10,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 1,
+    "jc_cited_by_count": 10
   },
   {
     "id": "dinusha-premasiri",
@@ -59,10 +67,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:21.868307+00:00",
+    "last_synced": "2026-11-22T06:05:08.088Z",
     "works_count": 1,
     "cited_by_count": 2,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 1,
+    "jc_cited_by_count": 2
   },
   {
     "id": "menaka-moonamaldeniya",
@@ -72,10 +82,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.060777+00:00",
+    "last_synced": "2026-11-22T06:05:09.282Z",
     "works_count": 3,
     "cited_by_count": 1,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 3,
+    "jc_cited_by_count": 1
   },
   {
     "id": "chathuni-thilakarathne",
@@ -85,10 +97,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.174585+00:00",
+    "last_synced": "2026-11-22T06:05:10.418Z",
     "works_count": 2,
     "cited_by_count": 6,
-    "h_index": 2
+    "h_index": 2,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 6
   },
   {
     "id": "shanika-abeysinghe",
@@ -137,10 +151,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.293298+00:00",
+    "last_synced": "2026-11-22T06:05:11.609Z",
     "works_count": 3,
     "cited_by_count": 22,
-    "h_index": 2
+    "h_index": 2,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 22
   },
   {
     "id": "chamod-kodithuwakku",
@@ -150,10 +166,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.411840+00:00",
+    "last_synced": "2026-11-22T06:05:12.729Z",
     "works_count": 1,
     "cited_by_count": 1,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 1,
+    "jc_cited_by_count": 1
   },
   {
     "id": "rashmika-perera",
@@ -215,10 +233,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.521595+00:00",
+    "last_synced": "2026-11-22T06:05:13.854Z",
     "works_count": 2,
     "cited_by_count": 8,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 8
   },
   {
     "id": "anjali-kiriella",
@@ -228,10 +248,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.642940+00:00",
+    "last_synced": "2026-11-22T06:05:14.981Z",
     "works_count": 2,
     "cited_by_count": 4,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 4
   },
   {
     "id": "hiroshika-marassana",
@@ -267,10 +289,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.785342+00:00",
+    "last_synced": "2026-11-22T06:05:16.110Z",
     "works_count": 1,
     "cited_by_count": 0,
-    "h_index": 0
+    "h_index": 0,
+    "journal_conference_count": 1,
+    "jc_cited_by_count": 0
   },
   {
     "id": "umesha-rathnayake",
@@ -280,10 +304,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:22.905666+00:00",
+    "last_synced": "2026-11-22T06:05:17.206Z",
     "works_count": 1,
     "cited_by_count": 0,
-    "h_index": 0
+    "h_index": 0,
+    "journal_conference_count": 1,
+    "jc_cited_by_count": 0
   },
   {
     "id": "ayodya-herath",
@@ -293,10 +319,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.025976+00:00",
+    "last_synced": "2026-11-22T06:05:18.317Z",
     "works_count": 2,
     "cited_by_count": 5,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 5
   },
   {
     "id": "maheshi-jayasinghe",
@@ -319,10 +347,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.145612+00:00",
+    "last_synced": "2026-11-22T06:05:19.479Z",
     "works_count": 1,
     "cited_by_count": 0,
-    "h_index": 0
+    "h_index": 0,
+    "journal_conference_count": 1,
+    "jc_cited_by_count": 0
   },
   {
     "id": "sujeewa-kodithuwakku",
@@ -332,10 +362,12 @@
     "department": "Business Management",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.255866+00:00",
+    "last_synced": "2026-11-22T06:05:20.599Z",
     "works_count": 7,
     "cited_by_count": 96,
-    "h_index": 4
+    "h_index": 4,
+    "journal_conference_count": 6,
+    "jc_cited_by_count": 84
   },
   {
     "id": "shashini-bulumulla",
@@ -345,10 +377,12 @@
     "department": "Business Management",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.373605+00:00",
+    "last_synced": "2026-11-22T06:05:21.722Z",
     "works_count": 2,
     "cited_by_count": 7,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 7
   },
   {
     "id": "oshani-dissanayake",
@@ -358,10 +392,12 @@
     "department": "Business Management",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.481975+00:00",
+    "last_synced": "2026-11-22T06:05:22.842Z",
     "works_count": 1,
     "cited_by_count": 0,
-    "h_index": 0
+    "h_index": 0,
+    "journal_conference_count": 0,
+    "jc_cited_by_count": 0
   },
   {
     "id": "buddhika-suraweera",
@@ -371,10 +407,12 @@
     "department": "Business Management",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.599668+00:00",
+    "last_synced": "2026-11-22T06:05:23.935Z",
     "works_count": 5,
     "cited_by_count": 51,
-    "h_index": 3
+    "h_index": 3,
+    "journal_conference_count": 4,
+    "jc_cited_by_count": 51
   },
   {
     "id": "erandi-de-silva",
@@ -384,10 +422,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.732252+00:00",
+    "last_synced": "2026-11-22T06:05:25.053Z",
     "works_count": 2,
     "cited_by_count": 3,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 3
   },
   {
     "id": "anuththara-ekanayake",
@@ -397,10 +437,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.859823+00:00",
+    "last_synced": "2026-11-22T06:05:26.148Z",
     "works_count": 3,
     "cited_by_count": 0,
-    "h_index": 0
+    "h_index": 0,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 0
   },
   {
     "id": "lakshima-mahanayake",
@@ -410,10 +452,12 @@
     "department": "Computing",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:23.967332+00:00",
+    "last_synced": "2026-11-22T06:05:27.268Z",
     "works_count": 2,
     "cited_by_count": 1,
-    "h_index": 1
+    "h_index": 1,
+    "journal_conference_count": 2,
+    "jc_cited_by_count": 1
   },
   {
     "id": "k-m-m-c-b-kulathunga",
@@ -423,10 +467,12 @@
     "department": "Business Management",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:24.071607+00:00",
+    "last_synced": "2026-11-22T06:05:28.382Z",
     "works_count": 16,
     "cited_by_count": 1280,
-    "h_index": 7
+    "h_index": 7,
+    "journal_conference_count": 15,
+    "jc_cited_by_count": 1280
   },
   {
     "id": "yamuna-wickramasinghe",
@@ -436,9 +482,11 @@
     "department": "Business Management",
     "email": "",
     "orcid": null,
-    "last_synced": "2026-11-22T00:32:24.183737+00:00",
+    "last_synced": "2026-11-22T06:05:29.516Z",
     "works_count": 1,
     "cited_by_count": 0,
-    "h_index": 0
+    "h_index": 0,
+    "journal_conference_count": 1,
+    "jc_cited_by_count": 0
   }
 ]
