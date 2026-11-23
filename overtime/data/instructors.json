@@ -117,5 +117,11 @@
     "email": "sasanka.r@kandyuni.lk",
     "dept": "Department of Business Management",
     "role": "instructor"
+  },
+  {
+    "id": "i1795430335582",
+    "name": "Shanika Abeysinghe",
+    "email": "shanika.ab@sliit.lk",
+    "dept": "Department of Computing"
   }
 ]
